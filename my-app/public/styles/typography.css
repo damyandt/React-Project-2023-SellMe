@@ -1,0 +1,71 @@
+h1,
+h2,
+h4,
+h5,
+h6 {
+    padding: 0.2em 1rem;
+}
+
+html {
+    font-family: "freightBig", serif;;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+
+
+ol,
+ul {
+    margin: 0em 1rem;
+}
+
+li {
+    list-style-position: inside;
+}
+
+button {
+    font-weight: bold;
+    border: white;
+    border-radius: 10%;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0 auto;
+    box-sizing: inherit;
+}
+
+a {
+    margin: 5px;
+    color: inherit;
+    text-decoration: none;
+}
+
+#root {
+    padding: 0;
+    margin: 0;
+}
+
+#box {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+}
+
+body {
+    background-color: rgb(247, 238, 238);
+    min-height: 100vh;
+}
+

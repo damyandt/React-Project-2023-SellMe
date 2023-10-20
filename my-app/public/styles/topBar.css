@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+.text-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+    background-color: #fff;
+    width: 100%;
+}
+
+.h1 {
+    margin-top: 0.3em;
+    font-size: 1em;
+    text-transform: uppercase;
+    color: #000;
+    font-weight:100 ;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: #fff;
+    text-stroke-color: #fff;
+    white-space: nowrap;
+    padding: 0 6rem;
+    letter-spacing: 1px;
+    animation: move-rtl 6000ms linear infinite
+    
+}
+
+@keyframes move-rtl {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
