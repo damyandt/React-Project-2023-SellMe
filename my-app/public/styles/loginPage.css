@@ -1,0 +1,159 @@
+.left {
+    background-color: #fdfdfd;
+    min-width: 68%;
+    height: 86vh;
+
+}
+
+.right {
+    min-width: 32%;
+    /* background-image: url('../images/beach-aerial-view-waves-ocean-macbook-pro-ios-11-mac-os-3840x2160-6422.jpg');
+    background-repeat: none; */
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+section {
+    display: flex;
+    width: 100%;
+}
+
+h3 {
+    font-size: 4em;
+    text-align: center;
+    margin-top: 2em;
+
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    word-spacing: 0.1em;
+}
+
+form {
+    width: 100%;
+}
+
+form>p {
+    text-align: center;
+    padding-top: 0.5em;
+}
+
+img {
+    /* width: 100%; */
+    /* overflow: hidden; */
+    height: 86vh;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width: 35em;
+    margin: 0 auto;
+    padding: 1em;
+    margin-top: 1em;
+    border-radius: 2em;
+    border: none;
+    background-color: rgb(208, 244, 229);
+}
+
+.inputs > input:nth-child(2) {
+    margin-bottom: 3em;
+}
+
+button {
+    margin: 1em;
+    padding: 1em;
+    border-radius: 2em;
+    width: 20em;
+    margin: 0 auto;
+    color: white;
+    background-color: hsl(178, 98%, 23%);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgba(1, 116, 112, 0.8);
+}
+
+.textImg {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    width: 6em;
+    font-weight: 600;
+}
+
+.textImg1 {
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 15em;
+    font-size: 1.1em;
+}
+
+.signUp {
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000;
+    background-color: rgb(255, 255, 255);
+    width: 13em;
+}
+
+.signUp:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+}
+
+.icons:nth-child(3) {
+margin-left: 0.9em;
+}
+
+.icons a {
+    font-size: 2em;
+    padding: 0.3em;
+}
+
+
+.hr-text {
+    border: 0;
+    line-height: 1em;
+    position: relative;
+    text-align: center;
+    height: 1.5em;
+    font-size: 14px;
+    margin: 1em 0.5em;
+}
+
+.hr-text::before {
+    content: "";
+    background: linear-gradient(to right, transparent, rgb(0, 0, 0), transparent);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+}
+
+.hr-text::after {
+    content: attr(data-content);
+    position: relative;
+    padding: 0 7px;
+    line-height: 1.5em;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+}
