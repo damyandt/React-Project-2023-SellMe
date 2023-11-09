@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
 
 export default function Login() {
+
     return (
         <section>
             <div className="left">
-                <form id="login" method="POST">
+                <form id="login" method="POST" >
                     <h3>Login to Your Acount</h3>
                     <p>Sign in using social networks</p>
                     <div className="icons">

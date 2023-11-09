@@ -1,12 +1,11 @@
 nav {
-    /* background-color: #05484c; */
     background-color: #fff;
     display: flex;
     width: 100%;
     justify-content: space-between;
-    align-items: center;
     box-shadow: 0px 15px 10px -15px rgba(0, 0, 0, 0.2);
     z-index: 10;
+    align-items: center;
 }
 
 div {
@@ -54,8 +53,8 @@ ul li {
     padding: 0.8em;
 }
 
-.fa-search:before  {
-font-size: 1.8em;
+.fa-search:before {
+    font-size: 1.8em;
 }
 
 .btnCategory {
@@ -68,4 +67,22 @@ font-size: 1.8em;
     margin: 0;
     padding: 0;
     align-self: center;
+}
+
+.logo {
+    width: auto;
+    height: 3.8em;
+    z-index: 11;
+    /* margin: 1em; */
+}
+
+.leftBtns {
+    z-index: 10;
+}
+
+.everything {
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0px 15px 10px -15px rgba(0, 0, 0, 0.2);
+    z-index: 13;
 }
