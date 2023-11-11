@@ -7,8 +7,6 @@
 
 .right {
     min-width: 32%;
-    /* background-image: url('../images/beach-aerial-view-waves-ocean-macbook-pro-ios-11-mac-os-3840x2160-6422.jpg');
-    background-repeat: none; */
     position: relative;
     text-align: center;
     color: white;
@@ -23,7 +21,6 @@ h3 {
     font-size: 4em;
     text-align: center;
     margin-top: 2em;
-
     font-weight: 600;
     letter-spacing: 0.05em;
     word-spacing: 0.1em;
@@ -38,9 +35,7 @@ form>p {
     padding-top: 0.5em;
 }
 
-img {
-    /* width: 100%; */
-    /* overflow: hidden; */
+.imgLogin {
     height: 86vh;
     width: 100%;
     object-fit: cover;

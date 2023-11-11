@@ -1,0 +1,66 @@
+.gender {
+    width: 44em;
+    max-height: 502.74px;
+}
+
+.genderBox {
+    display: flex;
+}
+
+.mansClothing,
+.womansClothing {
+    padding: 0;
+    margin: 0;
+    width: 50%;
+    min-height: 70vh;
+}
+
+.mansClothing {
+    background-image: url("../photos/man.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* filter: brightness(60%); */
+}
+
+.womansClothing {
+    background-image: url("../photos/woman1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* filter: brightness(60%); */
+}
+
+.homeBox {
+    width: 100%;
+    height: 30em;
+    background-color: #342525;
+}
+
+.clothing {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+}
+
+.manBtn,
+.womanBtn {
+    background-color: rgb(34, 220, 111);
+    color: #fff;
+    border-radius: 0.3em;
+    padding: 1em;
+    max-height: 3.4em;
+    min-width: 10em;
+    text-align: center;
+    margin-top: 30%;
+}
+.manBtn:hover,
+.womanBtn:hover {
+    background-color: rgb(25, 193, 95);
+}
+
+.manBtn {
+    margin-left: 70%;
+}
+.womanBtn {
+    margin-left: 8%;
+}
