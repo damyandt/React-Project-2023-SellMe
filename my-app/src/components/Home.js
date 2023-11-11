@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
-
+import { Card } from "./Card";
 
 export default function Home() {
+
+
     return (
         <>
             <div className="clothing">
@@ -17,9 +19,10 @@ export default function Home() {
             </div>
             <div className="appMsg">
                 <p>THE SELL ME APP</p>
-                <p>Soon new application, so you can shop from fast and easy your phone!</p>
+                <p>Soon new application, so you can shop fast and easy from your phone!</p>
                 <p>(Available on App Store   <img className="app-store" src="./photos/app-store-ios.svg" />   and Google Play   <img className="app-store" src="./photos/google-play.svg" />)</p>
             </div>
+            <Card />
 
         </>
     )

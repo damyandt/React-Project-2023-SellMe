@@ -59,7 +59,8 @@ export default function Register() {
                 </form>
             </div>
             <div className="right">
-                <img className="imgLogin" src="https://4kwallpapers.com/images/wallpapers/beach-aerial-view-waves-ocean-macbook-pro-ios-11-mac-os-3840x2160-6422.jpg" alt='backgroundPhoto' />
+            <img className='imgLogin' src="./photos/vilito.jpeg" alt='backgroundPhoto' />
+                {/* <img className="imgLogin" src="https://4kwallpapers.com/images/wallpapers/beach-aerial-view-waves-ocean-macbook-pro-ios-11-mac-os-3840x2160-6422.jpg" alt='backgroundPhoto' /> */}
                 <p className='textImg2'>Already have an account?</p>
                 <p className='textImg1'>Sign in your profile and start using the opportunities!</p>
 

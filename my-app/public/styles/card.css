@@ -1,0 +1,26 @@
+.cardWrapper {
+    height: 40em;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 3em;
+}
+
+.cardWrapper p {
+    text-align: center;
+    padding: 0.5em;
+    font-size: 2em;
+}
+
+.cardWrapper img {
+    max-height: 30em;
+    border: 1px solid rgb(247, 238, 238);;
+}
+
+.cardWrapper img:hover {
+    border: 1px solid black;
+}
+.cards {
+    display: flex;
+    gap: 0.2em;
+}

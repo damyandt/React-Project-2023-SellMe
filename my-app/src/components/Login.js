@@ -52,7 +52,8 @@ export const Login = () => {
                 </form>
             </div>
             <div className="right">
-                <img className='imgLogin' src="https://4kwallpapers.com/images/wallpapers/beach-aerial-view-waves-ocean-macbook-pro-ios-11-mac-os-3840x2160-6422.jpg" alt='backgroundPhoto' />
+                {/* <img className='imgLogin' src="https://4kwallpapers.com/images/wallpapers/beach-aerial-view-waves-ocean-macbook-pro-ios-11-mac-os-3840x2160-6422.jpg" alt='backgroundPhoto' /> */}
+                <img className='imgLogin' src="./photos/vilito.jpeg" alt='backgroundPhoto' />
                 <p className='textImg'>New Here?</p>
                 <p className='textImg1'>Sign up and discover a great amount of new opportunities!</p>
 
