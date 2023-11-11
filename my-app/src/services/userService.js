@@ -1,13 +1,22 @@
-import { requestFactory } from "./requester";
 
-const baseUrl = `http://localhost:3000/users`;
+const apiKey = `AIzaSyAAzlnTVSMcI7ed8tRhyhGd-TLIlRiwBKA`;
 
-export const authServiceFactory = (token) => {
-    const request = requestFactory(token);
+export const register = (data) => {
+    return fetch(`https:identitytoolkit.googleapis.com/v1/accounts:signUp?key=${apiKey}`, {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application.json'
+        },
+        body: JSON.stringify(data)
+    })
+};
 
-    return {
-        login: (data) => request.post(`${baseUrl}/login`, data),
-        register: (data) => request.post(`${baseUrl}/register`, data),
-        logout: () => request.get(`${baseUrl}/logout`),
-    };
+export const login = (data) => {
+    return fetch(`https:identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${apiKey}`, {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application.json'
+        },
+        body: JSON.stringify(data)
+    })
 };

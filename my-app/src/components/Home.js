@@ -1,19 +1,26 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+
 
 export default function Home() {
     return (
         <>
-            <div>
-                <div className="clothing">
-                    <div className="mansClothing">
-                        <Link to="/catalog" className="manBtn">Shop Man</Link>
-                    </div>
-                    <div className="womansClothing">
-                        <Link to="/catalog" className="womanBtn">Shop Woman</Link>
-                    </div>
-
+            <div className="clothing">
+                <div className="mansClothing">
+                    <Link to="/catalog" className="manBtn">Shop Man</Link>
+                </div>
+                <div className="womansClothing">
+                    <Link to="/catalog" className="womanBtn">Shop Woman</Link>
                 </div>
             </div>
+            <div className="delivery">
+                <div className="textDelivery">  <a className="fa fa-truck"></a>Worldwide delivery!</div>
+            </div>
+            <div className="appMsg">
+                <p>THE SELL ME APP</p>
+                <p>Soon new application, so you can shop from fast and easy your phone!</p>
+                <p>(Available on App Store   <img className="app-store" src="./photos/app-store-ios.svg" />   and Google Play   <img className="app-store" src="./photos/google-play.svg" />)</p>
+            </div>
+
         </>
     )
 }

@@ -1,7 +1,7 @@
 export const Catalog = () => {
     return (
         <>
-        <div>Catalog Page!!!</div>
+            <div>Catalog Page!!!</div>
         </>
     )
 }

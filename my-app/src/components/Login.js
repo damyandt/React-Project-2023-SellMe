@@ -1,15 +1,34 @@
 import { Link } from 'react-router-dom';
+import { login } from '../services/userService';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 export const Login = () => {
+    const navigate = useNavigate();
+
+    const [userData, setUserData] = useState({
+        email: '',
+        password: ''
+    })
+
+    const onChange = (e) => {
+        setUserData(state => ({
+            ...state,
+            [e.target.name]: e.target.value,
+        }))
+    }
 
     const onSubmit = (e) => {
         e.preventDefault();
 
-        const formData = new FormData(e.target);
-        const email = formData.get('email');
-     
-        localStorage.setItem('user', Object.fromEntries(formData));
-
+        login(userData)
+            .then(responce => {
+                console.log(responce)
+                localStorage.setItem('user', userData.email)
+                navigate('/catalog')
+            })
+            .catch((err) => console.log(err))
     }
     return (
         <section>
@@ -24,9 +43,9 @@ export const Login = () => {
                     </div>
                     <hr className="hr-text gradient" data-content="OR" />
                     <div className='inputs'>
-                        <input type="email" id="email" name="email" placeholder="Email" />
+                        <input type="email" id="email" name="email" placeholder="Email" value={userData.email} onChange={onChange} />
 
-                        <input type="password" id="password" name="password" placeholder="Password" />
+                        <input type="password" id="password" name="password" placeholder="Password" value={userData.password} onChange={onChange} />
 
                         <button>Sign in</button>
                     </div>

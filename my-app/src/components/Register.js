@@ -1,32 +1,40 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { register } from '../services/userService';
+import { useNavigate } from 'react-router-dom';
 
 export default function Register() {
-
-    const [email, setEmail] = useState('');
-    const [password, setPasswoord] = useState('');
     const [rePassword, setRePassword] = useState('');
 
+    const navigate = useNavigate();
+    const [userData, setUserData] = useState({
+        email: '',
+        password: '',
+    })
 
-    const onEmailChange = (e) => {
-        setEmail(e.target.value);
+    const onChange = (e) => {
+        setUserData(state => ({
+            ...state,
+            [e.target.name]: e.target.value,
+        }))
     }
-    const onPasswordChange = (e) => {
-        setPasswoord(e.target.value);
-    }
+
     const onRepassChange = (e) => {
         setRePassword(e.target.value);
     }
 
-
-
     const onSubmit = (e) => {
         e.preventDefault();
-        if(password != rePassword) {
+        if (userData.password != rePassword) {
             return alert('Passwords don\'t match!')
         }
-
-        localStorage.setItem("user", email);
+        register(userData)
+            .then(responce => {
+                console.log(responce)
+                localStorage.setItem('user', userData.email)
+                navigate('/catalog')
+            })
+            .catch((err) => console.log(err))
     }
 
     return (
@@ -42,9 +50,9 @@ export default function Register() {
                     </div>
                     <hr className="hr-text gradient" data-content="OR" />
                     <div className='inputs1'>
-                        <input type="email" id="email" placeholder="Email" value={email} onChange={onEmailChange} />
-                        <input type="password" id="password" placeholder="Password" value={password} onChange={onPasswordChange} />
-                        <input type="password" id="rePassword" placeholder="Repeat password" value={rePassword} onChange={onRepassChange} />
+                        <input type="email" name='email' id="email" placeholder="Email" value={userData.email} onChange={onChange} />
+                        <input type="password" name='password' id="password" placeholder="Password" value={userData.password} onChange={onChange} />
+                        <input type="password" name='rePassword' id="rePassword" placeholder="Repeat password" value={rePassword} onChange={onRepassChange} />
 
                         <button>Sign up</button>
                     </div>
