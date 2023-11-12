@@ -1,7 +1,5 @@
-
-const apiKey = `AIzaSyAAzlnTVSMcI7ed8tRhyhGd-TLIlRiwBKA`;
-
 export const register = (data) => {
+    const apiKey = `AIzaSyAAzlnTVSMcI7ed8tRhyhGd-TLIlRiwBKA`;
     return fetch(`https:identitytoolkit.googleapis.com/v1/accounts:signUp?key=${apiKey}`, {
         method: "POST",
         headers: {
@@ -12,6 +10,7 @@ export const register = (data) => {
 };
 
 export const login = (data) => {
+    const apiKey = `AIzaSyAAzlnTVSMcI7ed8tRhyhGd-TLIlRiwBKA`;
     return fetch(`https:identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${apiKey}`, {
         method: "POST",
         headers: {

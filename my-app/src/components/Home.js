@@ -22,8 +22,12 @@ export default function Home() {
                 <p>Soon new application, so you can shop fast and easy from your phone!</p>
                 <p>(Available on App Store   <img className="app-store" src="./photos/app-store-ios.svg" />   and Google Play   <img className="app-store" src="./photos/google-play.svg" />)</p>
             </div>
-            <Card />
+            <div className="cards">
+                <Card img={"./photos/adidas1.avif"} brand={"Adidas"} />
+                <Card img={"./photos/nike.webp"} brand={"Nike"}/>
+                <Card img={"./photos/champion.webp"} brand={"Champion"}/>
 
+            </div >
         </>
     )
 }

@@ -1,41 +1,18 @@
-import { useState } from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { register } from '../services/userService';
-import { useNavigate } from 'react-router-dom';
+import { useForm } from '../hooks/useForm';
+import { AuthContext } from '../contexts/authContext';
+
 
 export default function Register() {
-    const [rePassword, setRePassword] = useState('');
 
-    const navigate = useNavigate();
-    const [userData, setUserData] = useState({
+    const { onRegisterSubmit } = useContext(AuthContext)
+
+    const [userData, onChange, onSubmit] = useForm({
         email: '',
         password: '',
-    })
-
-    const onChange = (e) => {
-        setUserData(state => ({
-            ...state,
-            [e.target.name]: e.target.value,
-        }))
-    }
-
-    const onRepassChange = (e) => {
-        setRePassword(e.target.value);
-    }
-
-    const onSubmit = (e) => {
-        e.preventDefault();
-        if (userData.password != rePassword) {
-            return alert('Passwords don\'t match!')
-        }
-        register(userData)
-            .then(responce => {
-                console.log(responce)
-                localStorage.setItem('user', userData.email)
-                navigate('/catalog')
-            })
-            .catch((err) => console.log(err))
-    }
+        rePassword: '',
+    }, onRegisterSubmit)
 
     return (
         <section>
@@ -52,15 +29,14 @@ export default function Register() {
                     <div className='inputs1'>
                         <input type="email" name='email' id="email" placeholder="Email" value={userData.email} onChange={onChange} />
                         <input type="password" name='password' id="password" placeholder="Password" value={userData.password} onChange={onChange} />
-                        <input type="password" name='rePassword' id="rePassword" placeholder="Repeat password" value={rePassword} onChange={onRepassChange} />
+                        <input type="password" name='rePassword' id="rePassword" placeholder="Repeat password" value={userData.rePassword} onChange={onChange} />
 
                         <button>Sign up</button>
                     </div>
                 </form>
             </div>
             <div className="right">
-            <img className='imgLogin' src="./photos/vilito.jpeg" alt='backgroundPhoto' />
-                {/* <img className="imgLogin" src="https://4kwallpapers.com/images/wallpapers/beach-aerial-view-waves-ocean-macbook-pro-ios-11-mac-os-3840x2160-6422.jpg" alt='backgroundPhoto' /> */}
+                <img className='imgLogin' src="./photos/vilito.jpeg" alt='backgroundPhoto' />
                 <p className='textImg2'>Already have an account?</p>
                 <p className='textImg1'>Sign in your profile and start using the opportunities!</p>
 
