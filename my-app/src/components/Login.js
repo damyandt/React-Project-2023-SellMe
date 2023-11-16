@@ -2,34 +2,46 @@ import { Link } from 'react-router-dom';
 import { login } from '../services/userService';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useForm } from '../hooks/useForm';
+import { useAuthContext } from '../contexts/authContext';
 
 
 export const Login = () => {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
-    const [userData, setUserData] = useState({
-        email: '',
-        password: ''
-    })
+    // const [userData, setUserData] = useState({
+    //     email: '',
+    //     password: ''
+    // })
 
-    const onChange = (e) => {
-        setUserData(state => ({
-            ...state,
-            [e.target.name]: e.target.value,
-        }))
-    }
+    // const onChange = (e) => {
+    //     setUserData(state => ({
+    //         ...state,
+    //         [e.target.name]: e.target.value,
+    //     }))
+    // }
 
-    const onSubmit = (e) => {
-        e.preventDefault();
+    // const onSubmit = (e) => {
+    //     e.preventDefault();
 
-        login(userData)
-            .then(responce => {
-                console.log(responce)
-                localStorage.setItem('user', userData.email)
-                navigate('/catalog')
-            })
-            .catch((err) => console.log(err))
-    }
+    //     login(userData)
+    //         .then(responce => {
+    //             console.log(responce)
+    //             localStorage.setItem('user', userData.email)
+    //             navigate('/catalog')
+    //         })
+    //         .catch((err) => console.log(err))
+    // }
+
+    const { onLoginSubmit } = useAuthContext();
+    const { values, changeHandler, onSubmit } = useForm(
+        {
+            email: "",
+            password: "",
+        },
+        onLoginSubmit
+    );
+
     return (
         <section>
             <div className="left">
@@ -43,9 +55,9 @@ export const Login = () => {
                     </div>
                     <hr className="hr-text gradient" data-content="OR" />
                     <div className='inputs'>
-                        <input type="email" id="email" name="email" placeholder="Email" value={userData.email} onChange={onChange} />
+                        <input type="email" id="email" name="email" placeholder="Email" value={values.email} onChange={changeHandler} />
 
-                        <input type="password" id="password" name="password" placeholder="Password" value={userData.password} onChange={onChange} />
+                        <input type="password" id="password" name="password" placeholder="Password" value={values.password} onChange={changeHandler} />
 
                         <button>Sign in</button>
                     </div>

@@ -8,10 +8,10 @@ export default function Home() {
         <>
             <div className="clothing">
                 <div className="mansClothing">
-                    <Link to="/catalog" className="manBtn">Shop Man</Link>
+                    <Link to="/catalog/clothing/man/all" className="manBtn">Shop Man</Link>
                 </div>
                 <div className="womansClothing">
-                    <Link to="/catalog" className="womanBtn">Shop Woman</Link>
+                    <Link to="/catalog/clothing/woman/all" className="womanBtn">Shop Woman</Link>
                 </div>
             </div>
             <div className="delivery">

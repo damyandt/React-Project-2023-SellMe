@@ -6,7 +6,7 @@ export const register = (data) => {
             'Content-Type': 'application.json'
         },
         body: JSON.stringify(data)
-    })
+    }).then(response => response.json())
 };
 
 export const login = (data) => {
@@ -17,5 +17,5 @@ export const login = (data) => {
             'Content-Type': 'application.json'
         },
         body: JSON.stringify(data)
-    })
+    }).then(response => response.json())
 };

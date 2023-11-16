@@ -52,11 +52,26 @@
     min-width: 10em;
     text-align: center;
     margin-top: 30%;
+
+
+    /* line-height: 1.2em;
+    height: 1.3em;
+    color: #ffffff00;
+    text-shadow:
+        0 0 #fff,
+        0 1.2em #e7ff70;
+    overflow: hidden;
+    transition: .3s;
+    cursor: pointer;
+    padding: 0; */
 }
 
 .manBtn:hover,
 .womanBtn:hover {
     background-color: rgb(25, 193, 95);
+    /* text-shadow:
+        0 -1.2em #ffffff,
+        0 0 #e7ff70;; */
 }
 
 .manBtn {
@@ -66,6 +81,27 @@
 .womanBtn {
     margin-left: 8%;
 }
+/* .manBtn {
+    line-height: 1.2em;
+    height: 1.3em;
+    color: #0000;
+    text-shadow:
+        0 0 #000,
+        0 1.2em #1095c1;
+    overflow: hidden;
+    transition: .3s;
+    font-family: system-ui, sans-serif;
+    font-size: 3rem;
+    margin: 0;
+    cursor: pointer;
+    padding: 0 .1em;
+}
+
+.manBtn:hover {
+    text-shadow:
+        0 -1.2em #000,
+        0 0 #1095c1;
+} */
 
 .textDelivery {
     height: 2em;

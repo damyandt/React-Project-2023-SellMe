@@ -4,15 +4,15 @@ import { useForm } from '../hooks/useForm';
 import { AuthContext } from '../contexts/authContext';
 
 
-export default function Register() {
-
+export const Register = () => {
     const { onRegisterSubmit } = useContext(AuthContext)
-
-    const [userData, onChange, onSubmit] = useForm({
-        email: '',
-        password: '',
-        rePassword: '',
-    }, onRegisterSubmit)
+    const { values, changeHandler, onSubmit } = useForm(
+        {
+            email: "",
+            password: "",
+            rePassword: "",
+        },
+        onRegisterSubmit)
 
     return (
         <section>
@@ -27,9 +27,9 @@ export default function Register() {
                     </div>
                     <hr className="hr-text gradient" data-content="OR" />
                     <div className='inputs1'>
-                        <input type="email" name='email' id="email" placeholder="Email" value={userData.email} onChange={onChange} />
-                        <input type="password" name='password' id="password" placeholder="Password" value={userData.password} onChange={onChange} />
-                        <input type="password" name='rePassword' id="rePassword" placeholder="Repeat password" value={userData.rePassword} onChange={onChange} />
+                        <input type="email"  id="email" name="email" placeholder="Email" value={values.email} onChange={changeHandler} />
+                        <input type="password" name='password' id="password" placeholder="Password" value={values.password} onChange={changeHandler} />
+                        <input type="password" name='rePassword' id="rePassword" placeholder="Repeat password" value={values.rePassword} onChange={changeHandler} />
 
                         <button>Sign up</button>
                     </div>

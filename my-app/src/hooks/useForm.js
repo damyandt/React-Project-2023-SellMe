@@ -13,9 +13,9 @@ export const useForm = (initialValues, onSubmithandler) => {
         setValues(initialValues);
     }
 
-    return (
-        values,
+    return {
+         values,
         changeHandler,
         onSubmit
-    )
-}
+    };
+};
