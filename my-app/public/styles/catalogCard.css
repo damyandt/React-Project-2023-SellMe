@@ -1,0 +1,49 @@
+.catalogCardWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.CatalogCardImg {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 100%;
+}
+
+.catalogItemDetails {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
+}
+
+.CatalogCardImg2 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: none;
+    z-index: 99;
+}
+
+.LinkCss:hover .CatalogCardImg2 {
+    display: inline;
+    width: 100%;
+}
+
+.LinkCss:hover .CatalogCardImg {
+    display: none;
+
+}
+
+.CatalogCardImg:hover {
+    display: none;
+}
+
+.LinkCss {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    max-height: 25em;
+
+}
+
+.catalogItemDetails {
+    text-transform: uppercase;
+    padding-top: 1em;
+}

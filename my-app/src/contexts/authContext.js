@@ -18,7 +18,7 @@ export const AuthProvider = ({ children }) => {
                 password
             }
             const result = await login(info);
-            if (result.email == undefined) {
+            if (result.email === undefined) {
                 return alert("Password or email not matching!")
             }
             setAuth(result.email);
@@ -36,7 +36,7 @@ export const AuthProvider = ({ children }) => {
 
         try {
             const result = await register(registerData);
-            if (result.email == undefined) {
+            if (result.email === undefined) {
                 return alert("Email allready existing!")
             }
             setAuth(result.email);
@@ -62,7 +62,7 @@ export const AuthProvider = ({ children }) => {
         isAuthenticated = false;
     }
 
-    if (auth == "{}" || auth == {}) {
+    if (auth === "{}" || auth == {}) {
         isAuthenticated = false;
     }
 

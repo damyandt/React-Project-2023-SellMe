@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef } from 'react';
+import { useContext, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../contexts/authContext';
 
@@ -6,10 +6,7 @@ import { AuthContext } from '../contexts/authContext';
 export default function Header() {
     const { isAuthenticated } = useContext(AuthContext);
     const type = useRef()
-    // console.log(type)
-    // console = () => {
-    //     console.log("stava")
-    // }
+
     return (
         <>
             <div className='everything'>
@@ -30,11 +27,9 @@ export default function Header() {
                                             <li><Link to="/catalog/clothing/man/all" >View all</Link></li>
                                             <li><Link to="/catalog/clothing/man/bestSellers">Best sellers</Link></li>
                                             <li><Link to="/catalog/clothing/man/hoodies" >Hoodies & Sweatshirts</Link></li>
-                                            <li><Link to="/catalog/clothing/man/tops">T-Shirts & Tops</Link></li>
+                                            <li><Link to="/catalog/clothing/man/t-shirts">T-Shirts & Tops</Link></li>
                                             <li><Link to="/catalog/clothing/man/jeans">Jeans</Link></li>
                                             <li><Link to="/catalog/clothing/man/jackets">Jackets and coats</Link></li>
-                                            <li><Link to="/catalog/clothing/man/shoes">Shoes</Link></li>
-                                            <li><Link to="/catalog/clothing/man/socks">Socks</Link></li>
                                             <li><Link to="/catalog/clothing/man/swimmwear">Swimmwear</Link></li>
                                             <li><Link to="/catalog/clothing/man/underwear">Underwear</Link></li>
                                         </div>
@@ -44,13 +39,13 @@ export default function Header() {
                                             <li><Link to="/catalog/clothing/woman/all">View all</Link></li>
                                             <li><Link to="/catalog/clothing/woman/bestSellers">Best sellers</Link></li>
                                             <li><Link to="/catalog/clothing/woman/hoodies">Hoodies & Sweatshirts</Link></li>
-                                            <li><Link to="/catalog/clothing/woman/tops">T-Shirts & Tops</Link></li>
+                                            <li><Link to="/catalog/clothing/woman/t-shirts">T-Shirts & Tops</Link></li>
                                             <li><Link to="/catalog/clothing/woman/dresses">Dresses and skirts</Link></li>
                                             <li><Link to="/catalog/clothing/woman/jackets">Jackets and coats</Link></li>
+                                            <li><Link to="/catalog/clothing/woman/jeans">Jeans</Link></li>
                                             <li><Link to="/catalog/clothing/woman/underwear">Underwear</Link></li>
                                             <li><Link to="/catalog/clothing/woman/swimmwear">Swimmwear</Link></li>
-                                            <li><Link to="/catalog/clothing/woman/shoes">Shoes</Link></li>
-                                            <li><Link to="/catalog/clothing/woman/socks">Socks</Link></li>
+
                                         </div>
 
                                         <div className='genders'>

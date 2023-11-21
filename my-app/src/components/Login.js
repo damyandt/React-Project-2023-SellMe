@@ -7,31 +7,6 @@ import { useAuthContext } from '../contexts/authContext';
 
 
 export const Login = () => {
-    // const navigate = useNavigate();
-
-    // const [userData, setUserData] = useState({
-    //     email: '',
-    //     password: ''
-    // })
-
-    // const onChange = (e) => {
-    //     setUserData(state => ({
-    //         ...state,
-    //         [e.target.name]: e.target.value,
-    //     }))
-    // }
-
-    // const onSubmit = (e) => {
-    //     e.preventDefault();
-
-    //     login(userData)
-    //         .then(responce => {
-    //             console.log(responce)
-    //             localStorage.setItem('user', userData.email)
-    //             navigate('/catalog')
-    //         })
-    //         .catch((err) => console.log(err))
-    // }
 
     const { onLoginSubmit } = useAuthContext();
     const { values, changeHandler, onSubmit } = useForm(

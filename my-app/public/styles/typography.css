@@ -10,6 +10,7 @@ html {
     font-family: "freightBig", serif;;
     font-size: 16px;
     box-sizing: border-box;
+    min-height: 100vh;
 }
 
 
@@ -55,6 +56,8 @@ a {
 body {
     padding: 0;
     margin: 0;
+    background-color: rgb(247, 238, 238);
+    min-height: 100vh;
 }
 
 .main {
@@ -64,8 +67,5 @@ body {
     min-height: 100vh;
 }
 
-body {
-    background-color: rgb(247, 238, 238);
-    min-height: 100vh;
-}
+
 

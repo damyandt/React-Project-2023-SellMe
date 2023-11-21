@@ -2,8 +2,8 @@ footer {
     margin: auto auto 0 auto;
     text-align: center;
     background-color: rgb(208, 244, 229);
-
     width: 100%;
+    margin-top: auto;
 }
 
 .text {
