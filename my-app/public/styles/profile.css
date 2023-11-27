@@ -1,0 +1,45 @@
+.profilePage {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.username {
+    align-self: center;
+}
+
+.usernameText {
+    align-self: center;
+    padding: 1em;
+}
+
+.profileTitle {
+    @supports (background-clip: text) or (-webkit-background-clip: text) {
+        background-image:
+            url("https://ctl.s6img.com/society6/img/qB0XMHuKbMZCouAyStV9dg8WCMU/w_700/prints/~artwork/s6-original-art-uploads/society6/uploads/misc/c9d10b1ceda24ddfaab2b3a1e283969e/~~/shades-of-green-color-palette-stripes-prints.jpg");
+        background-position: center;
+        color: transparent;
+        -webkit-background-clip: text;
+    }
+}
+
+.profileTitle {
+    padding: 0.3em;
+    margin: 0;
+    font-size: 3em;
+}
+
+.postsText {
+    padding-top: 1em;
+    margin-left: 3em;
+    font-size: 2.3em;
+}
+
+.profileItemsWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.profilePage {
+    min-height: 100vh;
+}

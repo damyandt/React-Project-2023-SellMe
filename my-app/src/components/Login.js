@@ -1,7 +1,4 @@
 import { Link } from 'react-router-dom';
-import { login } from '../services/userService';
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { useForm } from '../hooks/useForm';
 import { useAuthContext } from '../contexts/authContext';
 

@@ -1,0 +1,50 @@
+.detailsImg {
+    width: 18em;
+    transition: transform .4s;
+}
+
+.detailsImg:hover {
+    transform: scale(1.5);
+    cursor: zoom-in;
+    border-radius: 1em;
+    transition-delay:0.5s;
+}
+
+.photos {
+    margin: 4em;
+    gap: 1em;
+    margin-left: 8em;
+    width: 35em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.detailsText {
+    display: flex;
+    margin-top: 6em;
+    flex-direction: column;
+}
+
+.detailsName {
+    padding-top: 1em;
+    padding-left: 3em;
+    font-size: 3em;
+}
+
+.everythingDetails {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.path {
+    padding-top: 1em;
+    align-self: center;
+    font-size: 0.8em;
+    text-transform: capitalize;
+}
+
+.strong {
+    color: red;
+}

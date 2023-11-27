@@ -10,6 +10,7 @@ export const AuthProvider = ({ children }) => {
     const [auth, setAuth] = useLocalStorage('user', {});
     const navigate = useNavigate();
 
+
     const onLoginSubmit = async (data) => {
         const { email, password } = data;
         try {
@@ -65,6 +66,7 @@ export const AuthProvider = ({ children }) => {
     if (auth === "{}" || auth == {}) {
         isAuthenticated = false;
     }
+
 
     const contextValues = {
         onRegisterSubmit,

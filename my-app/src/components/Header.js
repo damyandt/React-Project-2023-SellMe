@@ -5,7 +5,7 @@ import { AuthContext } from '../contexts/authContext';
 
 export default function Header() {
     const { isAuthenticated } = useContext(AuthContext);
-    const type = useRef()
+
 
     return (
         <>
@@ -16,7 +16,7 @@ export default function Header() {
                         <ul className='menu'>
                             <div className='categoriesBtn'>
                                 <div>
-                                    <li className='btnCategory'><a>Categories</a></li>
+                                    <Link className='btnCategory' to="/catalog">Categories</Link>
                                     <i className="fa fa-angle-down"></i>
                                 </div>
 
@@ -24,9 +24,9 @@ export default function Header() {
                                     <ul>
                                         <div className='genders'>
                                             <li className='link'><Link to="/catalog/clothing/man/all">Man</Link></li>
-                                            <li><Link to="/catalog/clothing/man/all" >View all</Link></li>
+                                            <li><Link to="/catalog/clothing/man/all">View all</Link></li>
                                             <li><Link to="/catalog/clothing/man/bestSellers">Best sellers</Link></li>
-                                            <li><Link to="/catalog/clothing/man/hoodies" >Hoodies & Sweatshirts</Link></li>
+                                            <li><Link to="/catalog/clothing/man/hoodies">Hoodies & Sweatshirts</Link></li>
                                             <li><Link to="/catalog/clothing/man/t-shirts">T-Shirts & Tops</Link></li>
                                             <li><Link to="/catalog/clothing/man/jeans">Jeans</Link></li>
                                             <li><Link to="/catalog/clothing/man/jackets">Jackets and coats</Link></li>
@@ -69,11 +69,10 @@ export default function Header() {
                     <div className='leftBtns'>
                         <ul>
                             <li><Link to="/sell">Sell</Link></li>
-                            <li><Link to="/help">Help</Link></li>
+                            <li><Link to="/profile">Profile</Link></li>
                             {!isAuthenticated && <li><Link to="/login">Sign in</Link></li>}
                             {isAuthenticated && <li><Link to="/logout">Logout</Link></li>}
                         </ul>
-                        {/* <li> <a>Profile</a></li> */}
                     </div>
                 </nav>
             </div>

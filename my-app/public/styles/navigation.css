@@ -102,6 +102,7 @@ ul li {
 .categoriesBtn:hover .dropdown-menu {
     display: flex;
     background-color: #fff;
+
 }
 
 .link {

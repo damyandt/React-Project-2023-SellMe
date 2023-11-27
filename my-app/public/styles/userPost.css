@@ -1,0 +1,47 @@
+.profileCardWrapper {
+    display: flex;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: 1em;
+    background-color: #f1f1f1;
+    justify-content: space-between;
+}
+
+.ProfileLinkCss {
+    width: 5em;
+    height: 5em;
+    overflow: hidden;
+    padding: 0;
+}
+
+.ProfileLinkCss img {
+    width: 5em;
+    height: auto;
+
+}
+
+.profileItemDetails {
+
+    align-items: center;
+}
+
+.editDelBtn ul li {
+    margin: 1em;
+    min-width: 5em;
+    background-color: rgb(75, 212, 132);
+    padding: 0.8em;
+    min-width: 5em;
+    color: #fff;
+    border-radius: 0.3em;
+text-align: center;
+}
+
+.editDelBtn ul {
+    align-items: center;
+}
+
+.editDelBtn button {
+    background-color: rgb(75, 212, 132);
+    color: #fff;
+font-weight: 100;
+}
