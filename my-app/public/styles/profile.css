@@ -43,3 +43,144 @@
 .profilePage {
     min-height: 100vh;
 }
+
+.acc {
+    width: 30%;
+    margin-left: -2em;
+}
+
+.profileText1 {
+    display: flex;
+    flex-direction: column;
+    font-size: 2.7em;
+    font-weight: 300;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.text {
+    font-size: 0.4em;
+    padding: 0;
+    margin: 0;
+}
+
+.profilePage svg {
+    margin-top: 3em;
+    padding: 0em;
+}
+
+.accountBtn {
+    margin: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.accountBtn a {
+    background-color: #000;
+    color: #fff;
+    padding: 1em;
+}
+
+.firstP {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.staticInfo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.accMenu {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding-left: 3em;
+    font-size: 1.5em;
+    gap: 1em;
+}
+
+.accountWrapper {
+    padding-top: 2em;
+}
+
+.accMenu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0em;
+}
+
+.accMenu button {
+    background-color: #fff;
+    font-weight: 100;
+    font-size: 0.6em;
+    cursor: pointer;
+}
+
+.accMenu li {
+    padding: 0;
+    margin: 0;
+    padding-bottom: 0.5em;
+
+}
+
+.needMargin {
+    display: flex;
+    flex-direction: column;
+    max-width: 50em;
+}
+
+.postText {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1em;
+}
+
+.text2 {
+    font-weight: 300;
+    font-size: 1.2em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.padd svg {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.padd hr {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.personalInfoText {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1em;
+    justify-content: center;
+    padding-left: 3em;
+}
+
+.forChange {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-right: 2em;
+}
+
+.howToText {
+    width: 20%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 200;
+    margin-left: 1em;
+    color: rgb(247, 125, 125);
+    padding-right: 4em;
+}

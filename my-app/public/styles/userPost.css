@@ -25,23 +25,28 @@
     align-items: center;
 }
 
-.editDelBtn ul li {
+.editDelBtn button {
     margin: 1em;
     min-width: 5em;
     background-color: rgb(75, 212, 132);
-    padding: 0.8em;
-    min-width: 5em;
     color: #fff;
     border-radius: 0.3em;
-text-align: center;
+    cursor: pointer;
+    min-height: 3.4em;
+    align-self: center;
 }
 
-.editDelBtn ul {
-    align-items: center;
+.editDelBtn button:nth-child(2) {
+    margin-right: 2em;
 }
+
+.editDelBtn button:hover {
+    background-color: rgba(75, 212, 132, 0.613);
+}
+
 
 .editDelBtn button {
     background-color: rgb(75, 212, 132);
     color: #fff;
-font-weight: 100;
+    font-weight: 100;
 }

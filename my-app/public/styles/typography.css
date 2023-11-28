@@ -28,7 +28,7 @@ li {
 button {
     font-weight: bold;
     border: white;
-    border-radius: 10%;
+    /* border-radius: 1em;  */
 }
 
 *,

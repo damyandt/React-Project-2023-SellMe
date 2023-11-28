@@ -57,11 +57,12 @@ input {
     background-color: rgb(208, 244, 229);
 }
 
-.inputs > input:nth-child(2) {
+.inputs>input:nth-child(2) {
     margin-bottom: 3em;
 }
 
-.inputs button {
+.inputs button,
+.inputs1 button {
     margin: 1em;
     padding: 1em;
     border-radius: 2em;
@@ -72,7 +73,8 @@ input {
     cursor: pointer;
 }
 
-.inputs button:hover {
+.inputs button:hover,
+.inputs1 button:hover {
     background-color: rgba(1, 116, 112, 0.8);
 }
 
@@ -103,6 +105,8 @@ input {
     color: #000;
     background-color: rgb(255, 255, 255);
     width: 13em;
+    padding: 1em;
+    border-radius: 2em;
 }
 
 .signUp:hover {
@@ -115,7 +119,7 @@ input {
 }
 
 .icons:nth-child(3) {
-margin-left: 0.9em;
+    margin-left: 0.9em;
 }
 
 .icons a {

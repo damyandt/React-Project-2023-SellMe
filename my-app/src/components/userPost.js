@@ -1,7 +1,15 @@
 import { Link } from "react-router-dom";
+import { deletePost } from "../services/clothingService";
 
 export const ProfileCard = (data) => {
 
+    const deletePost1 = () => {
+        deletePost(data.id);
+    }
+
+    const editPost = () => {
+        console.log("works!")
+    }
 
     return (
         <>
@@ -17,14 +25,11 @@ export const ProfileCard = (data) => {
                 </div>
 
                 <div className="editDelBtn">
-                    <ul>
-                        <li><button>Delete</button></li>
-                        <li><button>Edit</button></li>
-                    </ul>
-
+                    <button onClick={deletePost1}>Delete</button>
+                    <button onClick={editPost}>Edit</button>
                 </div>
-
             </div>
         </>
     )
 }
+

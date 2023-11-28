@@ -8,7 +8,6 @@ export const ClothingContext = createContext();
 export const ClothingProvider = ({
     children
 }) => {
-
     const [clothing, setClothing] = useState([]);
 
     useEffect(() => {
@@ -18,7 +17,8 @@ export const ClothingProvider = ({
     }, []);
 
     const contextValues = {
-        clothing
+        clothing,
+
     }
 
     return (

@@ -16,3 +16,15 @@ export const getOne = async (id) => {
 
     return result;
 };
+
+
+export const deletePost = async (id) => {
+    console.log(id)
+    await fetch(`https://sell-6caea-default-rtdb.firebaseio.com/products/${id}.json`, {
+        method: 'DELETE',
+        headers: {
+            'Content-type': 'application.json'
+        },
+    });
+    return document.location.reload();
+};
