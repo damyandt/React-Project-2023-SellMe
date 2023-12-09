@@ -17,6 +17,8 @@ export const Sell = () => {
             price: "",
             size: "",
             contact: "",
+            categorie: "",
+            type: "",
         },
         onPostSubmit
     );
@@ -32,26 +34,72 @@ export const Sell = () => {
             <p>Sell your clothing! </p>
             <form id="sell" method="POST" onSubmit={onSubmit}>
                 <div className="productInputs">
-                    <label htmlFor="name">Name*</label>
 
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
+                    <div className="gridProduct">
+                        <div>
+                            <label htmlFor="name">Name*</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Enter name..."
+                                value={values.name}
+                                onChange={changeHandler}
+                            />
 
-                        value={values.name}
-                        onChange={changeHandler}
-                    />
+                        </div>
 
-                    <label htmlFor="brand">Brand*</label>
-                    <input
-                        type="text"
-                        id="brand"
-                        name="brand"
-                        placeholder="Enter brand..."
-                        value={values.brand}
-                        onChange={changeHandler}
-                    />
+                        <div>
+                            <label htmlFor="brand">Brand*</label>
+                            <input
+                                type="text"
+                                id="brand"
+                                name="brand"
+                                placeholder="Enter brand..."
+                                value={values.brand}
+                                onChange={changeHandler}
+                            />
+                        </div>
+
+                        <div>
+                            <label htmlFor="categorie">Categorie*</label>
+                            {/* <input
+                                type="text"
+                                id="categorie"
+                                name="categorie"
+                                placeholder="Enter categorie..."
+                                value={values.categorie}
+                                onChange={changeHandler}
+                            /> */}
+                            <select name="categorie" id="categorie" value={values.categorie} onChange={changeHandler}>
+                                <option value="-">--Please choose an option--</option>
+                                <option value="clothing">Clothing</option>
+                                <option value="accessories">Accessorie</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label htmlFor="type">Type*</label>
+                            {/* <input
+                                type="text"
+                                id="type"
+                                name="type"
+                                placeholder="Enter type..."
+                                value={values.type}
+                                onChange={changeHandler}
+                            /> */}
+                            <select name="type" id="type" value={values.type} onChange={changeHandler}>
+                                <option value="-">--Please choose an option--</option>
+                                <option value="t-shirts">T-shirt & tops</option>
+                                <option value="hoodies">Hoodie & Sweatshirts</option>
+                                <option value="jeans">Jeans</option>
+                                <option value="dresses">Dresses & skirts</option>
+                                <option value="jackets">Jacket & coats</option>
+                                <option value="swimmwear">Swimmwear</option>
+                                <option value="underwear">Underwear</option>
+                            </select>
+                        </div>
+                    </div>
 
                 </div>
 
@@ -118,7 +166,7 @@ export const Sell = () => {
                         onChange={changeHandler}
                     />
 
-                    <label htmlFor="brand">Size*</label>
+                    <label htmlFor="size">Size*</label>
                     <input
                         type="text"
                         id="size"
@@ -128,15 +176,20 @@ export const Sell = () => {
                         onChange={changeHandler}
                     />
 
-                    <label htmlFor="brand">Gender*</label>
-                    <input
-                        type="list"
-                        id="size"
-                        name="size"
-                        placeholder="Enter size..."
-                        value={values.size}
+                    <label htmlFor="gender">Gender*</label>
+                    {/* <input
+                        type="text"
+                        id="gender"
+                        name="gender"
+                        placeholder="Enter gender..."
+                        value={values.gender}
                         onChange={changeHandler}
-                    />
+                    /> */}
+                    <select name="gender" id="gender" value={values.gender} onChange={changeHandler}>
+                        <option value="-">--Please choose an option--</option>
+                        <option value="man">Male</option>
+                        <option value="woman">Female</option>
+                    </select>
                 </div>
 
                 <div className="contactsInputs">
