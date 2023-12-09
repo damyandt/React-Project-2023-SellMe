@@ -6,7 +6,6 @@ import { CatalogCard } from "./CatalogCard";
 export const Catalog = () => {
     const { clothing } = useContext(ClothingContext);
     const { categorie, accessories, gender, type } = useParams();
-
     let newClothing = [];
     for (const x of Object.values(clothing)) {
         newClothing.push(x);
@@ -32,9 +31,12 @@ export const Catalog = () => {
                 <p>NEW HERE? Get 15% off everything!</p>
                 <p>With code: HELLOSELLME</p>
             </div>
-            {type == 'all' || type == undefined ?
+            {gender == "unisex" ? <h3 className="catalogTitle"><p>All {gender == "all" ? "Accosories" : `${type}`} </p></h3> : type == 'all' || type == undefined ?
                 <h3 className="catalogTitle"><p>All {gender != undefined ? `${gender}\`s` : ""} clothing </p></h3> :
                 <h3 className="catalogTitle"><p>{gender != "unisex" ? `${gender}\`s` : ""} {type}</p></h3>}
+            {/* {type == 'all' || type == undefined ?
+                <h3 className="catalogTitle"><p>All {gender != undefined ? `${gender}\`s` : ""} clothing </p></h3> :
+                <h3 className="catalogTitle"><p>{gender != "unisex" ? `${gender}\`s` : ""} {type}</p></h3>} */}
 
             <hr className="hr1" />
 

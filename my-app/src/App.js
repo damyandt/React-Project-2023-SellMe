@@ -12,6 +12,7 @@ import { AuthProvider } from "./contexts/authContext";
 import { ClothingProvider } from "./contexts/clothingContext";
 import { Logout } from "./components/Logout";
 import Profile from "./components/Profile";
+import { Sell } from "./components/Sell";
 
 
 
@@ -31,6 +32,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/sell" element={<Sell />} />
             <Route path="/catalog" element={<Catalog />} />
             <Route path="/catalog/:categorie/:gender/:type" element={<Catalog />} />
             <Route path="/:categorie/:gender/:type/:id/details" element={<Details />} />

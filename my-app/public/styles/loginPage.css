@@ -47,7 +47,8 @@ form>p {
     flex-direction: column;
 }
 
-input {
+.inputs input,
+.inputs1 input {
     width: 35em;
     margin: 0 auto;
     padding: 1em;

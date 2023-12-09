@@ -50,7 +50,7 @@ export default function Header() {
 
                                         <div className='genders'>
                                             <li className='link'><Link to="/register">Accessories</Link></li>
-                                            <li><Link to="/catalog/accessoriesunisex/all" type='viewAll'>View all</Link></li>
+                                            <li><Link to="/catalog/accessories/unisex/all" type='viewAll'>View all</Link></li>
                                             <li><Link to="/catalog/accessories/unisex/bestSellers">Best sellers</Link></li>
                                             <li><Link to="/catalog/accessories/unisex/sunglasses">Sunglasses</Link></li>
                                             <li><Link to="/catalog/accessories/unisex/bags">Bags and suitcases</Link></li>

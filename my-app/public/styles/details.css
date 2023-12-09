@@ -7,7 +7,7 @@
     transform: scale(1.5);
     cursor: zoom-in;
     border-radius: 1em;
-    transition-delay:0.5s;
+    transition-delay: 0.5s;
 }
 
 .photos {
@@ -23,6 +23,7 @@
     display: flex;
     margin-top: 6em;
     flex-direction: column;
+    width: 100%;
 }
 
 .detailsName {
@@ -47,4 +48,99 @@
 
 .strong {
     color: red;
+}
+
+.brand {
+    font-size: 4em;
+    margin-left: 0.6em;
+}
+
+.priceBox {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    margin-left: 2.5em;
+}
+
+.price {
+    font-size: 2em;
+    align-self: flex-end
+}
+
+.vat {
+    color: #616161;
+    font-size: 1em;
+    align-self: flex-end;
+    padding-left: 0.5em;
+}
+
+.sizeGuide {
+    background-color: #73bf3887;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-left: 2.5em;
+    max-width: 80%;
+    align-items: center;
+}
+
+.sizeGuide button {
+    background-color: transparent;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.sizeGuide p {
+    font-size: 1.3em;
+}
+
+.size {
+    border: 1px solid #000;
+    padding: 1em;
+    margin-left: 2.5em;
+    margin-top: 3em;
+    font-size: 1em;
+    max-width: 80%;
+    text-align: center;
+}
+
+.size:hover {
+    background-color: hsla(0, 0%, 87%, 0.427);
+}
+
+.sizeGuide svg {
+    align-items: flex-end;
+    margin-right: 0.5em;
+    margin-top: 0.2em;
+}
+
+.deliveryBox {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2.5em;
+    margin-top: 3em;
+    border: 1px solid #000;
+    padding: 1em;
+    max-width: 80%;
+    gap: 0.5em;
+}
+
+.deliveryBox1 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2.5em;
+    margin-top: 1.5em;
+    border: 1px solid #000;
+    padding: 1em;
+    max-width: 80%;
+    gap: 0.5em;
+}
+
+.delPrice {
+    justify-content: space-between;
+    padding-right: 2em;
+}
+
+.deliveryBox1>p>svg {
+    margin-right: 0.7em;
 }

@@ -1,0 +1,124 @@
+#sell {
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    gap: 1em;
+}
+
+.sellPage {
+    min-height: 100vh;
+    background-color: #eeeeee;
+    display: flex;
+    flex-direction: column;
+}
+
+.sellPage>p {
+    padding: 1.5em;
+    font-size: 2em;
+}
+
+#sell label {
+    margin-bottom: -0.8em;
+}
+
+#sell button {
+    padding: 1em 3em;
+    margin: 0 auto;
+    border-radius: 1.3em;
+    background-color: rgb(75, 212, 132);
+    cursor: pointer;
+}
+
+input:nth-child(5) {
+    margin-bottom: 3em;
+
+}
+
+#sell button:hover {
+    background-color: rgba(75, 212, 132, 0.8);
+
+}
+
+.productInputs,
+.detailsInputs,
+.contactsInputs {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-left: 3em;
+    margin-top: 0.1em;
+    background-color: #fff;
+    padding: 1.5em;
+    margin-right: 3em;
+
+}
+
+.photosInputs {
+    display: flex;
+    flex-direction: column;
+    margin-left: 3em;
+    margin-right: 3em;
+    margin-top: 0.1em;
+    padding: 1.5em;
+    background-color: #fff;
+}
+
+
+.gridPhotos svg {
+    z-index: 100;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.gridPhotos {
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: repeat(4, 0.1fr);
+    gap: 1em;
+
+}
+
+.gridPhotos div {
+    position: relative;
+}
+
+.productInputs input,
+.detailsInputs input,
+.contactsInputs input,
+.photosInputs input {
+    max-width: 15em;
+    padding: 1em;
+    border: none;
+    background-color: #f2f2f2;
+    border-radius: 0.4em;
+}
+
+.photosInputs input {
+    width: 10em;
+    height: 7em;
+    padding-top: 5em;
+
+}
+
+.productInputs input,
+.detailsInputs input,
+.contactsInputs input {
+    min-width: 25em;
+}
+
+/* input::file-selector-button {
+    width: 10em;
+    margin: 0;
+    height: 7em;
+    color: #f2f2f2;
+    opacity: 0;
+    cursor: pointer;
+} */
+
+.postBtn {
+    width: 10em;
+    margin: 0 auto;
+    padding: 1em;
+}

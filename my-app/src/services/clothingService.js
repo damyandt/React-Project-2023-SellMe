@@ -19,7 +19,6 @@ export const getOne = async (id) => {
 
 
 export const deletePost = async (id) => {
-    console.log(id)
     await fetch(`https://sell-6caea-default-rtdb.firebaseio.com/products/${id}.json`, {
         method: 'DELETE',
         headers: {
@@ -27,4 +26,17 @@ export const deletePost = async (id) => {
         },
     });
     return document.location.reload();
+};
+
+export const create = async (data) => {
+    const result = await fetch(`https://sell-6caea-default-rtdb.firebaseio.com/products.json`, {
+        method: 'POST',
+        headers: {
+            'Content-type': 'application.json'
+        },
+        body: JSON.stringify(data)
+    })
+
+    console.log(result);
+    return result;
 };

@@ -23,9 +23,9 @@ export default function Home() {
                 <p>(Available on App Store   <img className="app-store" src="./photos/app-store-ios.svg" />   and Google Play   <img className="app-store" src="./photos/google-play.svg" />)</p>
             </div>
             <div className="cards">
-                <Card img={"./photos/adidas1.avif"} brand={"Adidas"} />
-                <Card img={"./photos/nike.webp"} brand={"Nike"}/>
-                <Card img={"./photos/champion.webp"} brand={"Champion"}/>
+                <Card img={"./photos/adidas1.avif"} brand={"accessories"} />
+                <Card img={"./photos/nike.webp"} brand={"woman"}/>
+                <Card img={"./photos/champion.webp"} brand={"man"}/>
 
             </div >
         </>
