@@ -1,15 +1,7 @@
 import { Link } from "react-router-dom";
 import { deletePost } from "../services/clothingService";
 
-export const ProfileCard = (data) => {
-
-    const deletePost1 = () => {
-        deletePost(data.id);
-    }
-
-    const editPost = () => {
-        console.log("works!")
-    }
+export const LikedPosts = (data) => {
 
     return (
         <>
@@ -23,11 +15,6 @@ export const ProfileCard = (data) => {
                         <Link to={`/${data.categorie}/${data.gender}/${data.type}/${data.id}/details`}>{data.name}</Link>
                     </div>
                 </div>
-                <div className="editDelBtn">
-                    <button onClick={deletePost1}>Delete</button>
-                    <button onClick={editPost}>Edit</button>
-                </div>
-
             </div>
         </>
     )

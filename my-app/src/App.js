@@ -13,6 +13,8 @@ import { ClothingProvider } from "./contexts/clothingContext";
 import { Logout } from "./components/Logout";
 import Profile from "./components/Profile";
 import { Sell } from "./components/Sell";
+import AuthGuard from "./guards/AuthGuard";
+import GuestGuard from "./guards/GuestGuard";
 
 
 
@@ -30,14 +32,20 @@ function App() {
 
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/sell" element={<Sell />} />
             <Route path="/catalog" element={<Catalog />} />
             <Route path="/catalog/:categorie/:gender/:type" element={<Catalog />} />
             <Route path="/:categorie/:gender/:type/:id/details" element={<Details />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/logout" element={<Logout />} />
+
+            <Route element={<GuestGuard />}>
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
+            </Route>
+
+            <Route element={<AuthGuard />}>
+              <Route path="/sell" element={<Sell />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/logout" element={<Logout />} />
+            </Route>
           </Routes>
 
         </div>

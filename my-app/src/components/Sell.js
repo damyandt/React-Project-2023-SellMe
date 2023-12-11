@@ -19,6 +19,7 @@ export const Sell = () => {
             contact: "",
             categorie: "",
             type: "",
+            likes: [],
         },
         onPostSubmit
     );

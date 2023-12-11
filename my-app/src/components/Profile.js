@@ -3,19 +3,23 @@ import { AuthContext } from "../contexts/authContext";
 import { Link, useNavigate } from "react-router-dom";
 import { ClothingContext } from "../contexts/clothingContext";
 import { ProfileCard } from "./userPost";
+import { responceDataStructure } from "../utils/structureData";
+import { LikedPosts } from "./LikedPosts";
 
 export default function Profile() {
     const { isAuthenticated, userEmail } = useContext(AuthContext);
     const { clothing } = useContext(ClothingContext);
     const navigate = useNavigate();
 
-    const [OverviewClicked, setOverview] = useState(true)
-    const [postesClicked, setPosts] = useState(false)
-    const [returnClicked, setReturn] = useState(false)
-    const [AccInfo, setAccInfo] = useState(false)
+    const [OverviewClicked, setOverview] = useState(true);
+    const [postesClicked, setPosts] = useState(false);
+    const [LikedClicked, setLiked] = useState(false);
+    const [AccInfo, setAccInfo] = useState(false);
 
+    let allPosts = [];
     let userPosts = [];
-    let username = userEmail.split("@")[0]
+    let likedPosts = [];
+    let username = userEmail.split("@")[0];
 
 
     if (username[0] === "\"") {
@@ -30,35 +34,43 @@ export default function Profile() {
     }, [""])
 
     for (const x of Object.values(clothing)) {
-        userPosts.push(x);
+        allPosts.push(x);
+        if (x.likes) {
+            const responce = responceDataStructure(x.likes, username);
+            if (responce == true) {
+                likedPosts.push(x);
+            }
+        }
     }
-    userPosts = userPosts.filter((x) => x.ownerId == username);
+    userPosts = allPosts.filter((x) => x.ownerId == username);
 
     const showPosts = () => {
-        setAccInfo(false)
-        setOverview(false)
-        setReturn(false)
-        setPosts(true)
+        setAccInfo(false);
+        setOverview(false);
+        setLiked(false);
+        setPosts(true);
     }
     const showOverview = () => {
-        setAccInfo(false)
-        setOverview(true)
-        setReturn(false)
-        setPosts(false)
+        setAccInfo(false);
+        setOverview(true);
+        setLiked(false);
+        setPosts(false);
     }
     const showAccInfo = () => {
-        setAccInfo(true)
-        setOverview(false)
-        setReturn(false)
-        setPosts(false)
+        setAccInfo(true);
+        setOverview(false);
+        setLiked(false);
+        setPosts(false);
     }
-    const showReturn = () => {
-        setAccInfo(false)
-        setOverview(false)
-        setReturn(true)
-        setPosts(false)
+    const showLiked = () => {
+        setAccInfo(false);
+        setOverview(false);
+        setLiked(true);
+        setPosts(false);
     }
 
+    const btns = true;
+    const noBtns = false;
 
     return (
         <>
@@ -74,7 +86,7 @@ export default function Profile() {
                             <li><button onClick={showOverview}>Overview</button> </li>
                             <li><button onClick={showPosts}>Posts</button></li>
                             <li> <button onClick={showAccInfo}>Personal Details</button></li>
-                            <li> <button onClick={showReturn}>Liked</button></li>
+                            <li> <button onClick={showLiked}>Liked</button></li>
                         </ul>
                     </div>
                     {/* overview */}
@@ -102,7 +114,7 @@ export default function Profile() {
                         {userPosts.length != 0 ? <div className="postText"><p className="profileText1">Your Posts</p><p className="text2">Here you can find all your posts!</p></div> : <p className="profileText1">You have no posts yet!</p>}
                         <div className="profileItemsWrapper">
                             {userPosts.map((x) => (
-                                <ProfileCard key={x.id} {...x} />
+                                <ProfileCard key={x.id} {...x} buttuns={btns} />
                             ))}
                         </div>
                     </div>}
@@ -147,6 +159,20 @@ export default function Profile() {
 
 
                     </div>}
+                    {LikedClicked && <div className="staticInfo">
+                        <img src="./photos/acc.jpeg" className="acc" />
+
+                        {likedPosts.length != 0 ? <div className="postText"><p className="profileText1">Liked Posts</p><p className="text2">Here you can find all liked posts!</p></div> : <p className="profileText1">You have no liked posts yet!</p>}
+                        <div className="profileItemsWrapper">
+                            {likedPosts.map((x) => (
+                                <LikedPosts key={x.id} {...x} />
+                            ))}
+
+                        </div>
+
+                    </div>
+                    }
+
 
                 </div>
 
