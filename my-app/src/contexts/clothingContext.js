@@ -3,6 +3,7 @@ import { createContext, useState, useEffect, useContext } from "react";
 import { create, getAll } from "../services/clothingService";
 import { useNavigate } from "react-router-dom";
 import { useAuthContext } from "./authContext";
+import { postValidation } from "../utils/validation";
 
 
 export const ClothingContext = createContext();
@@ -24,10 +25,17 @@ export const ClothingProvider = ({
 
     const onPostSubmit = async (data) => {
         data.ownerId = userEmail.split("@")[0].slice(1)
-        await create(data);
-        navigate("/catalog");
 
-        document.location.reload();
+        const errors = postValidation(data);
+        if (Object.values(errors).length > 0) {
+            alert(Object.values(errors)[0]);
+        } else {
+            await create(data);
+            navigate("/catalog");
+
+            document.location.reload();
+        }
+
     };
 
     const contextValues = {

@@ -19,7 +19,7 @@ export const getCommentId = (responce, username) => {
 
   const users = Object.values(responce);
   const ids = Object.keys(responce);
-  const usernameIndex = 0;
+  let usernameIndex = 0;
   for (let i = 0; i < ids.length; i++) {
     if (users[i] == username) {
       usernameIndex = i

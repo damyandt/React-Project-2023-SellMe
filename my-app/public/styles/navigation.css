@@ -152,3 +152,8 @@ ul li {
 .genders li:nth-child(3) {
     font-weight: 600;
 }
+
+.search1 {
+    background-color: #fff;
+    color: #000;
+}

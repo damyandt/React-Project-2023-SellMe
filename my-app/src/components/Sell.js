@@ -16,7 +16,7 @@ export const Sell = () => {
             gender: "",
             price: "",
             size: "",
-            contact: "",
+            phone: "",
             categorie: "",
             type: "",
             likes: [],
@@ -64,14 +64,6 @@ export const Sell = () => {
 
                         <div>
                             <label htmlFor="categorie">Categorie*</label>
-                            {/* <input
-                                type="text"
-                                id="categorie"
-                                name="categorie"
-                                placeholder="Enter categorie..."
-                                value={values.categorie}
-                                onChange={changeHandler}
-                            /> */}
                             <select name="categorie" id="categorie" value={values.categorie} onChange={changeHandler}>
                                 <option value="-">--Please choose an option--</option>
                                 <option value="clothing">Clothing</option>
@@ -81,14 +73,6 @@ export const Sell = () => {
 
                         <div>
                             <label htmlFor="type">Type*</label>
-                            {/* <input
-                                type="text"
-                                id="type"
-                                name="type"
-                                placeholder="Enter type..."
-                                value={values.type}
-                                onChange={changeHandler}
-                            /> */}
                             <select name="type" id="type" value={values.type} onChange={changeHandler}>
                                 <option value="-">--Please choose an option--</option>
                                 <option value="t-shirts">T-shirt & tops</option>
@@ -159,7 +143,7 @@ export const Sell = () => {
                 <div className="detailsInputs">
                     <label htmlFor="price">Price*</label>
                     <input
-                        type="text"
+                        type="number"
                         id="price"
                         name="price"
                         placeholder="Enter price...($)"
@@ -178,14 +162,6 @@ export const Sell = () => {
                     />
 
                     <label htmlFor="gender">Gender*</label>
-                    {/* <input
-                        type="text"
-                        id="gender"
-                        name="gender"
-                        placeholder="Enter gender..."
-                        value={values.gender}
-                        onChange={changeHandler}
-                    /> */}
                     <select name="gender" id="gender" value={values.gender} onChange={changeHandler}>
                         <option value="-">--Please choose an option--</option>
                         <option value="man">Male</option>
@@ -195,13 +171,13 @@ export const Sell = () => {
 
                 <div className="contactsInputs">
 
-                    <label htmlFor="brand">Phone*</label>
+                    <label htmlFor="phone">Phone*</label>
                     <input
-                        type="text"
-                        id="contact"
-                        name="contact"
+                        type="number"
+                        id="phone"
+                        name="phone"
                         placeholder="Enter phone..."
-                        value={values.contact}
+                        value={values.phone}
                         onChange={changeHandler}
                     />
                 </div>

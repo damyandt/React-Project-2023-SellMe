@@ -1,15 +1,36 @@
 import React, { useContext } from "react"
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { ClothingContext } from "../contexts/clothingContext";
 import { CatalogCard } from "./CatalogCard";
 
 export const Catalog = () => {
+
+    const location = useLocation();
+    const data = location.state;
+
+
     const { clothing } = useContext(ClothingContext);
     const { categorie, accessories, gender, type } = useParams();
     let newClothing = [];
     for (const x of Object.values(clothing)) {
         newClothing.push(x);
+    }
+    let newClothing1 = []
+    let newClothing2 = []
+    let newClothing3 = []
 
+    if (data != null) {
+        newClothing1 = newClothing.filter(x => (x.name).toLowerCase().includes(data.value.toLowerCase()));
+        newClothing2 = newClothing.filter(x => (x.brand).toLowerCase().includes(data.value.toLowerCase()));
+        newClothing2 = newClothing.filter(x => (x.type).toLowerCase().includes(data.value.toLowerCase()));
+
+        if (newClothing2.length > newClothing1.length && newClothing2.length > newClothing3.length) {
+            newClothing = newClothing2
+        } else if (newClothing1.length > newClothing2.length && newClothing1.length > newClothing3.length) {
+            newClothing = newClothing1
+        } else {
+            newClothing = newClothing3
+        }
     }
 
     if (categorie != undefined) {

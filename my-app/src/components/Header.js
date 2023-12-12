@@ -1,10 +1,21 @@
-import { useContext, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../contexts/authContext';
+import { Navigate } from "react-router-dom";
 
 
 export default function Header() {
     const { isAuthenticated } = useContext(AuthContext);
+    const navigate = useNavigate();
+
+
+    const search = () => {
+        const value = document.getElementById("search").value;
+        const data = { value: value };
+        navigate("/catalog", {
+            state: data
+        });
+    }
 
 
     return (
@@ -25,7 +36,7 @@ export default function Header() {
                                         <div className='genders'>
                                             <li className='link'><Link to="/catalog/clothing/man/all">Man</Link></li>
                                             <li><Link to="/catalog/clothing/man/all">View all</Link></li>
-                                            <li><Link to="/catalog/clothing/man/bestSellers">Best sellers</Link></li>
+                                            <li><Link to="/catalog/clothing/man/hoodies">Best sellers</Link></li>
                                             <li><Link to="/catalog/clothing/man/hoodies">Hoodies & Sweatshirts</Link></li>
                                             <li><Link to="/catalog/clothing/man/t-shirts">T-Shirts & Tops</Link></li>
                                             <li><Link to="/catalog/clothing/man/jeans">Jeans</Link></li>
@@ -37,7 +48,7 @@ export default function Header() {
                                         <div className='genders'>
                                             <li className='link'><Link to="/catalog/clothing/woman/all">Woman</Link></li>
                                             <li><Link to="/catalog/clothing/woman/all">View all</Link></li>
-                                            <li><Link to="/catalog/clothing/woman/bestSellers">Best sellers</Link></li>
+                                            <li><Link to="/catalog/clothing/woman/jeans">Best sellers</Link></li>
                                             <li><Link to="/catalog/clothing/woman/hoodies">Hoodies & Sweatshirts</Link></li>
                                             <li><Link to="/catalog/clothing/woman/t-shirts">T-Shirts & Tops</Link></li>
                                             <li><Link to="/catalog/clothing/woman/dresses">Dresses and skirts</Link></li>
@@ -51,7 +62,7 @@ export default function Header() {
                                         <div className='genders'>
                                             <li className='link'><Link to="/register">Accessories</Link></li>
                                             <li><Link to="/catalog/accessories/unisex/all" type='viewAll'>View all</Link></li>
-                                            <li><Link to="/catalog/accessories/unisex/bestSellers">Best sellers</Link></li>
+                                            <li><Link to="/catalog/accessories/unisex/sunglasses">Best sellers</Link></li>
                                             <li><Link to="/catalog/accessories/unisex/sunglasses">Sunglasses</Link></li>
                                             <li><Link to="/catalog/accessories/unisex/bags">Bags and suitcases</Link></li>
                                             <li><Link to="/catalog/accessories/unisex/umbrellas">Umbrellas</Link></li>
@@ -62,10 +73,13 @@ export default function Header() {
                             </div>
                         </ul>
                     </div>
+
                     <div>
-                        <a href="#" className="fa fa-search"></a>
+                        <button onClick={search} className="fa fa-search search1"></button>
                         <textarea name="search" id="search" className='search' placeholder='Search for brand, model, ...'></textarea>
                     </div>
+
+
                     <div className='leftBtns'>
                         <ul>
                             <li><Link to="/sell">Sell</Link></li>
