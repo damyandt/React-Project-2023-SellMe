@@ -91,6 +91,7 @@ input:nth-child(5) {
 
 .gridPhotos div {
     position: relative;
+    max-width: 133.33px;
 }
 
 .productInputs input,

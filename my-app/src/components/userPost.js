@@ -9,7 +9,7 @@ export const ProfileCard = (data) => {
     }
 
     const editPost = () => {
-      navigate(`/sdadsa/edit`)
+      navigate(`/${data.id}/edit`)
     }
 
     return (

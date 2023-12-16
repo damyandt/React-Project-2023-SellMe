@@ -24,6 +24,7 @@
 }
 
 .cards {
+    justify-content: space-between;
     display: flex;
     gap: 0.2em;
 }

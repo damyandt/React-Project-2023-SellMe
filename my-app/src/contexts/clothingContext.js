@@ -1,6 +1,6 @@
 import { createContext, useState, useEffect, useContext } from "react";
 
-import { create, getAll } from "../services/clothingService";
+import { create, edit, getAll } from "../services/clothingService";
 import { useNavigate } from "react-router-dom";
 import { useAuthContext } from "./authContext";
 import { postValidation } from "../utils/validation";
@@ -37,10 +37,24 @@ export const ClothingProvider = ({
         }
 
     };
+    const onEditSubmit = async (data, id) => {
+
+        const errors = postValidation(data);
+        if (Object.values(errors).length > 0) {
+            alert(Object.values(errors)[0]);
+        } else {
+
+            await edit(id, data);
+            navigate(`/${data.categorie}/${data.gender}/${data.type}/${id}/details`);
+
+        }
+
+    };
 
     const contextValues = {
         clothing,
-        onPostSubmit
+        onPostSubmit,
+        onEditSubmit
     }
 
     return (
