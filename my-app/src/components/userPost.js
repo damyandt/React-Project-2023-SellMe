@@ -1,14 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { deletePost } from "../services/clothingService";
 
 export const ProfileCard = (data) => {
+    const navigate = useNavigate();
 
     const deletePost1 = () => {
         deletePost(data.id);
     }
 
     const editPost = () => {
-        console.log("works!")
+      navigate(`/sdadsa/edit`)
     }
 
     return (

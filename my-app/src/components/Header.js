@@ -9,7 +9,8 @@ export default function Header() {
     const navigate = useNavigate();
 
 
-    const search = () => {
+    const search = (e) => {
+        e.preventDefault();
         const value = document.getElementById("search").value;
         const data = { value: value };
         navigate("/catalog", {
@@ -73,11 +74,19 @@ export default function Header() {
                             </div>
                         </ul>
                     </div>
-
                     <div>
-                        <button onClick={search} className="fa fa-search search1"></button>
-                        <textarea name="search" id="search" className='search' placeholder='Search for brand, model, ...'></textarea>
+                        <form onSubmit={search}>
+                            <div>
+                                <button onClick={search} className="fa fa-search search1"></button>
+                                <input name="search" id="search" className='search' placeholder='Search for brand, model, ...' ></input>
+                            </div>
+                        </form>
                     </div>
+
+
+
+
+
 
 
                     <div className='leftBtns'>

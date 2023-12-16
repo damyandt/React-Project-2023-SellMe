@@ -15,6 +15,7 @@ import Profile from "./components/Profile";
 import { Sell } from "./components/Sell";
 import AuthGuard from "./guards/AuthGuard";
 import GuestGuard from "./guards/GuestGuard";
+import { EditPage } from "./components/EditPage";
 
 
 
@@ -44,6 +45,7 @@ function App() {
             <Route element={<AuthGuard />}>
               <Route path="/sell" element={<Sell />} />
               <Route path="/profile" element={<Profile />} />
+              <Route path="/:id/edit" element={<EditPage />} />
               <Route path="/logout" element={<Logout />} />
             </Route>
           </Routes>

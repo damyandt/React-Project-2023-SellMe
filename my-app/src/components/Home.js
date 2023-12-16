@@ -28,6 +28,9 @@ export default function Home() {
                 <Card img={"./photos/champion.webp"} brand={"man"}/>
 
             </div >
+           
+
         </>
+
     )
 }
