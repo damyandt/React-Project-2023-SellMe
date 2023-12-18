@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { deletePost } from "../services/clothingService";
+
 
 export const LikedPosts = (data) => {
 

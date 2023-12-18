@@ -82,6 +82,10 @@ export const Sell = () => {
                                 <option value="jackets">Jacket & coats</option>
                                 <option value="swimmwear">Swimmwear</option>
                                 <option value="underwear">Underwear</option>
+                                <option value="sunglasses">Sunglasses</option>
+                                <option value="umbrellas">Umbrellas</option>
+                                <option value="hats">Hats</option>
+                                <option value="bags">Bags & Suitcases </option>
                             </select>
                         </div>
                     </div>
@@ -166,6 +170,7 @@ export const Sell = () => {
                         <option value="-">--Please choose an option--</option>
                         <option value="man">Male</option>
                         <option value="woman">Female</option>
+                        <option value="unisex">Unisex</option>
                     </select>
                 </div>
 

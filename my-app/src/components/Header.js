@@ -41,7 +41,7 @@ export default function Header() {
                                             <li><Link to="/catalog/clothing/man/hoodies">Hoodies & Sweatshirts</Link></li>
                                             <li><Link to="/catalog/clothing/man/t-shirts">T-Shirts & Tops</Link></li>
                                             <li><Link to="/catalog/clothing/man/jeans">Jeans</Link></li>
-                                            <li><Link to="/catalog/clothing/man/jackets">Jackets and coats</Link></li>
+                                            <li><Link to="/catalog/clothing/man/jackets">Jackets & coats</Link></li>
                                             <li><Link to="/catalog/clothing/man/swimmwear">Swimmwear</Link></li>
                                             <li><Link to="/catalog/clothing/man/underwear">Underwear</Link></li>
                                         </div>
@@ -52,8 +52,8 @@ export default function Header() {
                                             <li><Link to="/catalog/clothing/woman/jeans">Best sellers</Link></li>
                                             <li><Link to="/catalog/clothing/woman/hoodies">Hoodies & Sweatshirts</Link></li>
                                             <li><Link to="/catalog/clothing/woman/t-shirts">T-Shirts & Tops</Link></li>
-                                            <li><Link to="/catalog/clothing/woman/dresses">Dresses and skirts</Link></li>
-                                            <li><Link to="/catalog/clothing/woman/jackets">Jackets and coats</Link></li>
+                                            <li><Link to="/catalog/clothing/woman/dresses">Dresses & skirts</Link></li>
+                                            <li><Link to="/catalog/clothing/woman/jackets">Jackets & coats</Link></li>
                                             <li><Link to="/catalog/clothing/woman/jeans">Jeans</Link></li>
                                             <li><Link to="/catalog/clothing/woman/underwear">Underwear</Link></li>
                                             <li><Link to="/catalog/clothing/woman/swimmwear">Swimmwear</Link></li>
@@ -65,7 +65,7 @@ export default function Header() {
                                             <li><Link to="/catalog/accessories/unisex/all" type='viewAll'>View all</Link></li>
                                             <li><Link to="/catalog/accessories/unisex/sunglasses">Best sellers</Link></li>
                                             <li><Link to="/catalog/accessories/unisex/sunglasses">Sunglasses</Link></li>
-                                            <li><Link to="/catalog/accessories/unisex/bags">Bags and suitcases</Link></li>
+                                            <li><Link to="/catalog/accessories/unisex/bags">Bags & Suitcases</Link></li>
                                             <li><Link to="/catalog/accessories/unisex/umbrellas">Umbrellas</Link></li>
                                             <li><Link to="/catalog/accessories/unisex/hats">Hats</Link></li>
                                         </div>
