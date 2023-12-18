@@ -64,6 +64,7 @@ like posts,\
 ![SS4](./public/photos/screenshots/Screenshot_4.png)
 ![SS5](./public/photos/screenshots/Screenshot_5.png)
 ![SS6](./public/photos/screenshots/Screenshot_6.png)
+![SS7](./public/photos/screenshots/Screenshot_7.png)
 
 ## ⚙️ Setup
 <a name="setup"/>
