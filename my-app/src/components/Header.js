@@ -61,7 +61,7 @@ export default function Header() {
                                         </div>
 
                                         <div className='genders'>
-                                            <li className='link'><Link to="/register">Accessories</Link></li>
+                                            <li className='link'><Link to="/catalog/accessories/unisex/all">Accessories</Link></li>
                                             <li><Link to="/catalog/accessories/unisex/all" type='viewAll'>View all</Link></li>
                                             <li><Link to="/catalog/accessories/unisex/sunglasses">Best sellers</Link></li>
                                             <li><Link to="/catalog/accessories/unisex/sunglasses">Sunglasses</Link></li>

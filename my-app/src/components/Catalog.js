@@ -20,6 +20,7 @@ export const Catalog = () => {
     let newClothing3 = []
 
     if (data != null) {
+        
         newClothing1 = newClothing.filter(x => (x.name).toLowerCase().includes(data.value.toLowerCase()));
         newClothing2 = newClothing.filter(x => (x.brand).toLowerCase().includes(data.value.toLowerCase()));
         newClothing2 = newClothing.filter(x => (x.type).toLowerCase().includes(data.value.toLowerCase()));
