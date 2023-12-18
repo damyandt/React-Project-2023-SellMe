@@ -62,7 +62,7 @@ export const EditPage = () => {
                 <p>NEW HERE? Get 15% off everything!</p>
                 <p>With code: HELLOSELLME</p>
             </div>
-            <p>Sell your clothing! </p>
+            <p>Edit your post! </p>
             <form id="sell" onSubmit={onSubmit}>
                 <div className="productInputs">
 

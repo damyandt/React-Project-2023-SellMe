@@ -13,9 +13,10 @@ export default function Details() {
     const [heart, showHeart] = useState(false);
 
     const [isAlreadyLiked, setIsAlreadyLiked] = useState(false);
+    console.log( localStorage.getItem("user"));
 
     const username = localStorage.getItem("user").split("@")[0].slice(1)
-    console.log(username)
+
 
     useEffect(() => {
         getOne(id)
