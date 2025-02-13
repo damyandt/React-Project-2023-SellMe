@@ -8,7 +8,7 @@ export const LikedPosts = (data) => {
             <div className="profileCardWrapper">
                 <div>
                     <Link className="ProfileLinkCss" to={`/${data.categorie}/${data.gender}/${data.type}/${data.id}/details`}>
-                        <img className="ProfileCardImg" src={data.photo1} />
+                        <img className="ProfileCardImg" src={data.photo1} alt="profile icon"/>
                     </Link>
 
                     <div className="profileItemDetails">

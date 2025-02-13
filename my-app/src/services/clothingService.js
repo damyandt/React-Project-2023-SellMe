@@ -42,7 +42,7 @@ export const create = async (data) => {
 };
 
 export const edit = async (id, data) => {
-    const responce = await fetch(`https://sell-6caea-default-rtdb.firebaseio.com/products/${id}.json`, {
+    await fetch(`https://sell-6caea-default-rtdb.firebaseio.com/products/${id}.json`, {
         method: 'PATCH',
         headers: {
             'Content-Type': 'application.json'

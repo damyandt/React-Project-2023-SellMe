@@ -21,13 +21,13 @@ export const Register = () => {
                     <h3>Make new Account</h3>
                     <p>Sign up using social networks</p>
                     <div className="icons">
-                        <a href="#" className="fa fa-facebook"></a>
-                        <a href="#" className="fa fa-instagram"></a>
-                        <a href="#" className="fa fa-twitter"></a>
+                        <p className="fa fa-facebook"></p>
+                        <p className="fa fa-instagram"></p>
+                        <p className="fa fa-twitter"></p>
                     </div>
                     <hr className="hr-text gradient" data-content="OR" />
                     <div className='inputs1'>
-                        <input type="email"  id="email" name="email" placeholder="Email" value={values.email} onChange={changeHandler} />
+                        <input type="email" id="email" name="email" placeholder="Email" value={values.email} onChange={changeHandler} />
                         <input type="password" name='password' id="password" placeholder="Password" value={values.password} onChange={changeHandler} />
                         <input type="password" name='rePassword' id="rePassword" placeholder="Repeat password" value={values.rePassword} onChange={changeHandler} />
 

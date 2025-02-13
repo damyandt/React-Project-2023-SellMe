@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Card } from "./Card";
 
 export default function Home() {
-console.log(Number(true))
+    console.log(Number(true))
 
     return (
         <>
@@ -15,20 +15,20 @@ console.log(Number(true))
                 </div>
             </div>
             <div className="delivery">
-                <div className="textDelivery">  <a className="fa fa-truck"></a>Worldwide delivery!</div>
+                <div className="textDelivery"><p className="fa fa-truck" >Worldwide delivery!</p></div>
             </div>
             <div className="appMsg">
                 <p>THE SELL ME APP</p>
                 <p>Soon new application, so you can shop fast and easy from your phone!</p>
-                <p>(Available on App Store   <img className="app-store" src="./photos/app-store-ios.svg" />   and Google Play   <img className="app-store" src="./photos/google-play.svg" />)</p>
+                <p>(Available on App Store   <img className="app-store" src="./photos/app-store-ios.svg" alt="app-store"/>   and Google Play   <img className="app-store" src="./photos/google-play.svg" alt="app-store"/>)</p>
             </div>
             <div className="cards">
                 <Card img={"./photos/adidas1.avif"} brand={"accessories"} />
-                <Card img={"./photos/nike.webp"} brand={"woman"}/>
-                <Card img={"./photos/champion.webp"} brand={"man"}/>
+                <Card img={"./photos/nike.webp"} brand={"woman"} />
+                <Card img={"./photos/champion.webp"} brand={"man"} />
 
             </div >
-           
+
 
         </>
 

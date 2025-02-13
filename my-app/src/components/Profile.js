@@ -30,19 +30,18 @@ export default function Profile() {
         if (!isAuthenticated) {
             return navigate('/login');
         }
-
-    }, [""])
+    }, [isAuthenticated, navigate])
 
     for (const x of Object.values(clothing)) {
         allPosts.push(x);
         if (x.likes) {
             const responce = responceDataStructure(x.likes, username);
-            if (responce == true) {
+            if (responce === true) {
                 likedPosts.push(x);
             }
         }
     }
-    userPosts = allPosts.filter((x) => x.ownerId == username);
+    userPosts = allPosts.filter((x) => x.ownerId === username);
 
     const showPosts = () => {
         setAccInfo(false);
@@ -70,7 +69,6 @@ export default function Profile() {
     }
 
     const btns = true;
-    const noBtns = false;
 
     return (
         <>
@@ -91,7 +89,7 @@ export default function Profile() {
                     </div>
                     {/* overview */}
                     {OverviewClicked && <div className="staticInfo">
-                        <img src="./photos/acc.jpeg" className="acc" />
+                        <img src="./photos/acc.jpeg" className="acc" alt="acc"/>
                         <div className="profileText1">
                             <p>Your Account</p>
                             <p className="text">Welcome to your private corner of SellMe. You can manage your posts, returns and account info right here.</p>
@@ -109,9 +107,9 @@ export default function Profile() {
                     </div>}
                     {/* posts */}
                     {postesClicked && <div className="staticInfo">
-                        <img src="./photos/acc.jpeg" className="acc" />
+                        <img src="./photos/acc.jpeg" className="acc" alt="acc"/>
 
-                        {userPosts.length != 0 ? <div className="postText"><p className="profileText1">Your Posts</p><p className="text2">Here you can find all your posts!</p></div> : <p className="profileText1">You have no posts yet!</p>}
+                        {userPosts.length !== 0 ? <div className="postText"><p className="profileText1">Your Posts</p><p className="text2">Here you can find all your posts!</p></div> : <p className="profileText1">You have no posts yet!</p>}
                         <div className="profileItemsWrapper">
                             {userPosts.map((x) => (
                                 <ProfileCard key={x.id} {...x} buttuns={btns} />
@@ -120,7 +118,7 @@ export default function Profile() {
                     </div>}
 
                     {AccInfo && <div className="staticInfo padd">
-                        <img src="./photos/acc.jpeg" className="acc" />
+                        <img src="./photos/acc.jpeg" className="acc" alt="acc"/>
 
                         <div className="postText">
                             <p className="profileText1">Personal Details</p>
@@ -160,9 +158,9 @@ export default function Profile() {
 
                     </div>}
                     {LikedClicked && <div className="staticInfo">
-                        <img src="./photos/acc.jpeg" className="acc" />
+                        <img src="./photos/acc.jpeg" className="acc" alt="acc"/>
 
-                        {likedPosts.length != 0 ? <div className="postText"><p className="profileText1">Liked Posts</p><p className="text2">Here you can find all liked posts!</p></div> : <p className="profileText1">You have no liked posts yet!</p>}
+                        {likedPosts.length !== 0 ? <div className="postText"><p className="profileText1">Liked Posts</p><p className="text2">Here you can find all liked posts!</p></div> : <p className="profileText1">You have no liked posts yet!</p>}
                         <div className="profileItemsWrapper">
                             {likedPosts.map((x) => (
                                 <LikedPosts key={x.id} {...x} />

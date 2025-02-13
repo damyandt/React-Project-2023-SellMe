@@ -10,7 +10,7 @@ export const Catalog = () => {
 
 
     const { clothing } = useContext(ClothingContext);
-    const { categorie, accessories, gender, type } = useParams();
+    const { categorie, gender, type } = useParams();
     let newClothing = [];
     for (const x of Object.values(clothing)) {
         newClothing.push(x);
@@ -34,14 +34,14 @@ export const Catalog = () => {
         }
     }
 
-    if (categorie != undefined) {
-        newClothing = newClothing.filter(x => x.categorie == categorie)
+    if (categorie !== undefined) {
+        newClothing = newClothing.filter(x => x.categorie === categorie)
     }
-    if (gender != undefined) {
-        newClothing = newClothing.filter(x => x.gender == gender);
+    if (gender !== undefined) {
+        newClothing = newClothing.filter(x => x.gender === gender);
     }
-    if (type != undefined && type != 'all') {
-        newClothing = newClothing.filter(x => x.type == type);
+    if (type !== undefined && type !== 'all') {
+        newClothing = newClothing.filter(x => x.type === type);
     }
 
 
@@ -53,13 +53,9 @@ export const Catalog = () => {
                 <p>NEW HERE? Get 15% off everything!</p>
                 <p>With code: HELLOSELLME</p>
             </div>
-            {gender == "unisex" ? <h3 className="catalogTitle"><p>All {gender == "all" ? "Accosories" : `${type}`} </p></h3> : type == 'all' || type == undefined ?
-                <h3 className="catalogTitle"><p>All {gender != undefined ? `${gender}\`s` : ""} clothing </p></h3> :
-                <h3 className="catalogTitle"><p>{gender != "unisex" ? `${gender}\`s` : ""} {type}</p></h3>}
-            {/* {type == 'all' || type == undefined ?
-                <h3 className="catalogTitle"><p>All {gender != undefined ? `${gender}\`s` : ""} clothing </p></h3> :
-                <h3 className="catalogTitle"><p>{gender != "unisex" ? `${gender}\`s` : ""} {type}</p></h3>} */}
-
+            {gender === "unisex" ? <h3 className="catalogTitle"><p>All {gender === "all" ? "Accosories" : `${type}`} </p></h3> : type === 'all' || type === undefined ?
+                <h3 className="catalogTitle"><p>All {gender !== undefined ? `${gender}\`s` : ""} clothing </p></h3> :
+                <h3 className="catalogTitle"><p>{gender !== "unisex" ? `${gender}\`s` : ""} {type}</p></h3>}
             <hr className="hr1" />
 
             <div className="catalogItemsWrapper">

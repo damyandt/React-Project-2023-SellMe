@@ -63,10 +63,9 @@ export const AuthProvider = ({ children }) => {
         isAuthenticated = false;
     }
 
-    if (auth === "{}" || auth == {}) {
+    if (auth === "{}") {
         isAuthenticated = false;
     }
-
 
     const contextValues = {
         onRegisterSubmit,

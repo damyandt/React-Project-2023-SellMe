@@ -7,8 +7,8 @@ export const CatalogCard = (data) => {
             <div className="catalogCardWrapper">
 
                 <Link className="LinkCss" to={`/${data.categorie}/${data.gender}/${data.type}/${data.id}/details`}>
-                    <img className="CatalogCardImg" src={data.photo1} />
-                    <img className="CatalogCardImg2" src={data.photo2} />
+                    <img className="CatalogCardImg" src={data.photo1} alt="catalog card"/>
+                    <img className="CatalogCardImg2" src={data.photo2} alt="catalog card"/>
                 </Link>
   
                 <div className="catalogItemDetails">

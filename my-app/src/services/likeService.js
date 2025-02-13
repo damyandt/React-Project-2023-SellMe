@@ -10,7 +10,7 @@ export const like = async (id, userId) => {
     return await responce.json()
 }
 export const unlike = async (id, userId) => {
-    const responce = await fetch(`https://sell-6caea-default-rtdb.firebaseio.com/products/${id}/likes/${userId}.json`, {
+    await fetch(`https://sell-6caea-default-rtdb.firebaseio.com/products/${id}/likes/${userId}.json`, {
         method: 'DELETE',
     });
 }

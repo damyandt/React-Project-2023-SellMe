@@ -1,13 +1,10 @@
 import { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../contexts/authContext';
-import { Navigate } from "react-router-dom";
-
 
 export default function Header() {
     const { isAuthenticated } = useContext(AuthContext);
     const navigate = useNavigate();
-
 
     const search = (e) => {
         e.preventDefault();
@@ -18,11 +15,10 @@ export default function Header() {
         });
     }
 
-
     return (
         <>
             <div className='everything'>
-                <Link to="/"><img src="./photos/logo.jpeg" className='logo' /></Link>
+                <Link to="/"><img src="./photos/logo.jpeg" className='logo' alt='logo'/></Link>
                 <nav>
                     <div>
                         <ul className='menu'>

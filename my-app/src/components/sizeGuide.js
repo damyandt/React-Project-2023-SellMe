@@ -18,9 +18,7 @@ export const SizeGuide = () => {
 
     return (
         <>
-            <div ><img className="sizeGuideImg" src="https://craft-production.imgix.net/2020/08/28123153/Size-guide-Dam-eng.jpg?q=70&fit=clip&w=1287&fm=jpg&auto=format" /></div>
-
+            <div><img className="sizeGuideImg" src="/photos/size-guide.jpeg" alt="size guide"/></div>
         </>
-
     )
 }

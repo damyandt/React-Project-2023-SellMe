@@ -21,9 +21,9 @@ export const Login = () => {
                     <h3>Login to Your Acount</h3>
                     <p>Sign in using social networks</p>
                     <div className="icons">
-                        <a href="#" className="fa fa-facebook"></a>
-                        <a href="#" className="fa fa-instagram"></a>
-                        <a href="#" className="fa fa-twitter"></a>
+                        <p className="fa fa-facebook"></p>
+                        <p className="fa fa-instagram"></p>
+                        <p className="fa fa-twitter"></p>
                     </div>
                     <hr className="hr-text gradient" data-content="OR" />
                     <div className='inputs'>

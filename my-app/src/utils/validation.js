@@ -2,11 +2,11 @@ export const postValidation = (data) => {
 
     const validationErrors = {};
 
-    if (data.name == "") {
+    if (data.name === "") {
         validationErrors.name = "Name is required!";
     }
 
-    if (data.brand == "") {
+    if (data.brand === "") {
         validationErrors.brand = "Brand is required!";
     }
 
@@ -37,7 +37,7 @@ export const postValidation = (data) => {
 
     if (!data.price) {
         validationErrors.price = "Price is required!";
-    } else if (Number(data.price) == NaN) {
+    } else if (isNaN(data.price)) {
         validationErrors.price = "Price must be number!";
     } else if (data.price < 0) {
         validationErrors.price = "Price must be positiv number!";
